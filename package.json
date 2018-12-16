@@ -20,7 +20,9 @@
     "url": "https://github.com/yangchunboy/webpackDemo/issues"
   },
   "homepage": "https://github.com/yangchunboy/webpackDemo#readme",
-  "dependencies": {},
+  "dependencies": {
+    "less": "^3.9.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.0",
@@ -28,6 +30,7 @@
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.27.1",
