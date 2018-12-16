@@ -1,0 +1,29 @@
+{
+  "name": "webpackdemo",
+  "version": "1.0.0",
+  "description": "a webpack demo",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangchunboy/webpackDemo.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "chuck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangchunboy/webpackDemo/issues"
+  },
+  "homepage": "https://github.com/yangchunboy/webpackDemo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
