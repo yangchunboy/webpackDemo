@@ -1,6 +1,7 @@
-function component() {
+const component = ()=> {
   var element = document.createElement('div');
-  element.innerHTML = "webpackDemo";
+  const str = 'webpackDemo';
+  element.innerHTML = str;
   return element;
 }
 
