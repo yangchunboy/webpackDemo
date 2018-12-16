@@ -1,4 +1,9 @@
 #app {
-  color: #66ccff;
+  font-size: 25px;
+  font-weight: bold;
+}
+#css {
+  background-color: #66ccff;
   display: flex;
+  padding: 0 30px;
 }
