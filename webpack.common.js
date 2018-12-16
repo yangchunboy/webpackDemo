@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
@@ -25,7 +26,17 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['last 3 versions', '> 1%']
+                })
+              ]
+            }
+          }
         ]
       },
       {
@@ -44,6 +55,15 @@ module.exports = {
           loader: 'style-loader' // creates style nodes from JS strings
         }, {
           loader: 'css-loader' // translates CSS into CommonJS
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            plugins: [
+              autoprefixer({
+                browsers: ['last 3 versions', '> 1%']
+              })
+            ]
+          }
         }, {
           loader: 'less-loader' // compiles Less to CSS
         }]
