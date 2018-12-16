@@ -5,19 +5,19 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
-    './src/main.js',
-    './src/style.less'
+    './src/main.js',// 编译js的入口文件
+    './src/style.less' // 编译less的入口文件
   ],
-  output: {
+  output: { // 编译完成的js会放在dist文件夹下命名为bundle.js
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist']), // 每次编译先删除旧的dist文件夹
     new HtmlWebpackPlugin({
-        title: 'Production',
-        inject: true,
-        template: './src/index.html',
+        title: 'Production', // 用来生成页面的 title 元素
+        inject: true, // 注入所有的资源到特定的 template 或者 templateContent 中，如果设置为 true 或者 body，所有的 javascript 资源将被放置到 body 元素的底部，'head' 将放置到 head 元素中
+        template: './src/index.html', // 模板文件路径
     })
   ],
   module: {
